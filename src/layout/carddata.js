@@ -1,7 +1,9 @@
+
+
 const CardData =[
     {
         title:"Walk Alone:-",
-        para:"This store has posters of the same series as your favorite, welcome to enter the store to search and buy! Great for all ages, our posters are brightly colored and UV resistant, making them the perfect home decor for kids bedrooms, apartments, classrooms, dorms, offices and more.Strict quality control, made of high-quality canvas and produced with UV and water resistant inks to prevent fading.",
+        para:"This store has posters of the same series as your favorite, welcome to enter the store to search and buy! Great for all ages, our posters are brightly colored and UV resistant, making them the perfect home decor for kids bedrooms, apartments, classrooms, dorms, offices and more.Strict quality control, made of high-quality canvas and . produced with UV and water resistant inks to prevent fading.",
         cardImg:"book1.jpg"
     },
     {
@@ -29,43 +31,43 @@ const CardData =[
     },
     {
         title:"The 18 best fantasy books:-",
-        para:"Commonly known in English as Arabian Nights, One Thousand and One Nights is a collection of fantasy tales written in Arabic, over centuries by authors from the Arabian Peninsula, North Africa, and South Asia. With stories varying in genre from comedies, tragedies, erotica, and poetry, ", 
+        para:"Commonly known in English as Arabian Nights, One Thousand and One Nights is a collection of fantasy tales written in Arabic, over centuries by authors from the Arabian Peninsula, North Africa, and South Asia. With stories varying in genre from comedies, tragedies, erotica.", 
         cardImg:"book6.png",
          
     },
     {
         title:"Book of Life:-",
-        para:"Bringing the magic and suspense of the All Souls Trilogy to a deeply satisfying conclusion, this highly anticipated finale went straight to #1 on the New York Times bestseller list. In The Book of Life, Diana and Matthew time-travel back from Elizabethan London to make a dramatic return.At Matthew’s ancestral home, Sept-Tours, they reunite with the beloved cast of characters from A Discovery of Witches—with one significant exception.", 
+        para:"Bringing the magic and suspense of the All Souls Trilogy to a deeply satisfying conclusion, this highly anticipated finale went straight to #1 on the New York Times bestseller list. In The Book of Life, Diana and Matthew time-travel back from Elizabethan London to make a dramatic. return.At Matthew’s ancestral home, Sept-Tours, they reunite with the beloved cast of characters from .", 
         cardImg:"book7.png",
          
     },
     {
         title:"Wolf Brother:- ",
-        para:"Six thousand years ago. Powerful mages stalk the land, threatening to destroy all the forest clans. According to legend, only twelve-year-old Torak and his wolf-cub companion can defeat them. Their journey together takes them through perilous terrain and into dangers they never imagined. Torak and Wolf are terrified of their mission. But if they do not battle to save their world, who will", 
+        para:"Six thousand years ago. Powerful mages stalk the land, threatening to destroy all the forest clans. According to legend, only twelve-year-old Torak and his wolf-cub companion can defeat them. Their journey together takes them through perilous terrain and into dangers they never imagined. Torak and Wolf are terrified of their mission. But if they do not battle to save their world, who will A Discovery of Witches—with.", 
         cardImg:"book8.jpg",
          
     },
     {
         title:"A NEW HISTORY OF INDIA:-",
-        para:"The book covers all the major landmarks of Indian history from prehistoric times up to the twenty-first century—starting with the country’s geological origins a few billion years in the past and the migration of Homo sapiens from Africa into the region several millennia ago. It traces the evolution of Indian civilization through a multitude of epochs, personalities, and turning points.", 
+        para:"The book covers all the major landmarks of Indian history from prehistoric times up to the twenty-first century—starting with the country’s geological origins a few billion years in the past and the migration of Homo sapiens from Africa into the region several millennia ago. It traces the evolution of Indian civilization through a multitude of epochs. ", 
         cardImg:"book9.jpg",
          
     },
     {
         title:"Think and Grow Rich:-",
-        para:"Think and Grow Rich’ is the world’s most widely acclaimed motivational book on success ever published. It became the must-have bible of prosperity and success for millions of readers since its initial publication in 1937.Napoleon Hill, America’s most beloved motivational author, devoted 25 years to finding out how the wealthy became that way. After interviewing over 500 of the most affluent men and women of his time.", 
+        para:"Think and Grow Rich’ is the world’s most widely acclaimed motivational book on success ever published. It became the must-have bible of prosperity and success for millions of readers since its initial publication in 1937.Napoleon Hill, America’s most beloved motivational author, devoted 25 years to finding out how the wealthy became that way A Discovery of Witches—with one significant exception.", 
         cardImg:"book10.jpg",
          
     },
     {
         title:"Rich Dad Poor Dad:- ",
-        para:"Personal finance author and lecturer Robert T. Kiyosaki developed his unique economic perspective from two very different influences – his two fathers. One father (Robert’s real father) was a highly educated man but fiscally poor. The other father was the father of Robert’s best friend – that Dad was an eighth-grade drop-out who became a self-made multi-millionaire.", 
+        para:"Personal finance author and lecturer Robert T. Kiyosaki developed his unique economic perspective from two very different influences – his two fathers. One father (Robert’s real father) was a highly educated man but fiscally poor. The other father was the father of Robert’s best friend – that Dad was an eighth-grade drop-out who became a self-made multi-millionaire. A Discovery of Witches—with one significant exception", 
         cardImg:"book11.jpg",
          
     },
     {
         title:"Genius Intelligence:-",
-        para:"The brain's potential is the human potential! What if there are faster and easier ways to learn and study than the modi operandi currently being taught in mainstream education systems? GENIUS INTELLIGENCE: Secret Techniques and Technologies to Increase IQ is the ultimate treatise on accelerated learning methods. Written by novelists, filmmakers and independent researchers James Morcan & Lance Morcan with a foreword by leading scientist. ", 
+        para:"The brain's potential is the human potential! What if there are faster and easier ways to learn and study than the modi operandi currently being taught in mainstream education systems? GENIUS INTELLIGENCE: Secret Techniques and Technologies to Increase IQ is the ultimate treatise on accelerated learning methods. Written by novelists, filmmakers and independent researchers James Morcan &  . ", 
         cardImg:"book12.jpg",
          
     },

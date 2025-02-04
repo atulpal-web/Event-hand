@@ -1,3 +1,5 @@
+import React from 'react';
+
 const CardUi = ({title,paragraph,image}) => {
 
     return (
