@@ -1,5 +1,4 @@
 
-
 const CardData =[
     {
         title:"Walk Alone:-",

@@ -4,7 +4,7 @@ class ClassCardUi extends Component {
     render() {
         return(
             <>
-            <div className="card shadow border-0">
+            <div className="card shadow border-01">
             <img src={this.props.image ?? "images/logo192.png"} alt="" height={600}/>
             <div className="card-body"> 
                 <h1>{this.props.title ?? "dummy title"}</h1>
@@ -15,5 +15,6 @@ class ClassCardUi extends Component {
         )
     }
 }
+
 
 export default ClassCardUi
