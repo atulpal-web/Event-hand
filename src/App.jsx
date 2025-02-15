@@ -16,7 +16,6 @@ const App = () => {
     return (
         <>
             <Home /> 
-            <About />
              <ClassCounter/>
             <Counter/>  
              <ClassProps /> 
