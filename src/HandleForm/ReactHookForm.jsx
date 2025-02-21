@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+// import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap CSS
 
 const ReactHookForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -8,89 +9,94 @@ const ReactHookForm = () => {
     }
 
     return (
-        <div className="container d-flex justify-content-center align-items-center vh-100">
-            <div className="col-lg-6 p-5 shadow-lg rounded bg-light">
-                <form method="post" onSubmit={handleSubmit(signup)}>
-                    <h3 className="text-center mb-4 text-primary">User Registration</h3>
+        <div className="container mt-5">
+            <form onSubmit={handleSubmit(signup)} className="col-lg-6 mx-auto my-5 p-5 shadow bg-primary">
+                <div className="form-group">
+                    <label>Username:</label>
+                    <input type="text" className="form-control" {...register('username', {
+                        required: "Enter username",
+                        minLength: { value: 3, message: "Minimum 3 characters" },
+                        maxLength: { value: 20, message: "Maximum 20 characters" },
+                        pattern: { value: /^[A-Za-z]+$/, message: "Only characters are allowed" }
+                    })} placeholder="Enter username" />
+                    <small className="text-danger">{errors.username?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Username :-</strong>
-                        <input type="text" {...register('username', {
-                            required: "Enter username",
-                            minLength: { value: 3, message: "Minimum 3 characters" },
-                            maxLength: { value: 20, message: "Maximum 20 characters" },
-                            pattern: { value: /^[A-Za-z]+$/, message: "Only characters are allowed" }
-                        })} className="form-control" placeholder="Enter username" />
-                        <p className="text-danger">{errors.username?.message}</p>
-                    </div>
+                <div className="form-group">
+                    <label>Mobile:</label>
+                    <input type="text" className="form-control" {...register('mobile', {
+                        required: "Enter mobile number",
+                        pattern: { value: /^[0-9]{10}$/, message: "Enter a valid 10-digit mobile number" }
+                    })} placeholder="Enter Mobile" />
+                    <small className="text-danger">{errors.mobile?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Mobile :-</strong>
-                        <input type="text" {...register('mobile', {
-                            required: "Enter mobile number",
-                            pattern: { value: /^[0-9]{10}$/, message: "Enter a valid 10-digit mobile number" }
-                        })} className="form-control" placeholder="Enter Mobile" />
-                        <p className="text-danger">{errors.mobile?.message}</p>
-                    </div>
+                <div className="form-group">
+                    <label>Email:</label>
+                    <input type="email" className="form-control" {...register('email', {
+                        required: "Enter email",
+                        pattern: { value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, message: "Enter a valid email address" }
+                    })} placeholder="Enter Email" />
+                    <small className="text-danger">{errors.email?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Email:-</strong>
-                        <input type="email" {...register('email', {
-                            required: "Enter email",
-                            pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Enter a valid email address" }
-                        })} className="form-control" placeholder="Enter Email" />
-                        <p className="text-danger">{errors.email?.message}</p>
-                    </div>
+                <div className="form-group">
+                    <label>Password:</label>
+                    <input type="password" className="form-control" {...register('password', {
+                        required: "Enter password",
+                        minLength: { value: 6, message: "Minimum 6 characters required" }
+                    })} placeholder="Enter Password" />
+                    <small className="text-danger">{errors.password?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Password:-</strong>
-                        <input type="password" {...register('password', {
-                            required: "Enter password",
-                            minLength: { value: 6, message: "Minimum 6 characters required" }
-                        })} className="form-control" placeholder="Enter Password" />
-                        <p className="text-danger">{errors.password?.message}</p>
-                    </div>
+                <div className="form-group">
+                    <label>Address:</label>
+                    <textarea className="form-control" {...register('address', {
+                        required: "Enter address"
+                    })} placeholder="Enter Address"></textarea>
+                    <small className="text-danger">{errors.address?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Address:-</strong>
-                        <textarea {...register('address', {
-                            required: "Enter address"
-                        })} className="form-control" placeholder="Enter Address"></textarea>
-                        <p className="text-danger">{errors.address?.message}</p>
-                    </div>
+                <div className="form-group">
+                    <label>Course:</label>
+                    <select className="form-control" {...register('course', { required: "Select a course" })}>
+                        <option value="">-- Select Course --</option>
+                        <option value="Web">Web</option>
+                        <option value="App">App</option>
+                        <option value="Game">Game</option>
+                    </select>
+                    <small className="text-danger">{errors.course?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Course:-</strong>
-                        <select {...register('course', { required: "Select a course" })} className="form-select">
-                            <option value="">-- Select Course --</option>
-                            <option value="Web">Web</option>
-                            <option value="App">App</option>
-                            <option value="Game">Game</option>
-                        </select>
-                        <p className="text-danger">{errors.course?.message}</p>
-                    </div>
-
-                    <div className="mb-3">
-                        <strong className="form-strong">Gender:-</strong>
-                        <div>
-                            <input type="radio" {...register('gender', { required: "Select a gender" })} value="Male" className="mx-2" />Male
-                            <input type="radio" {...register('gender', { required: "Select a gender" })} value="Female" className="mx-2" />Female
-                            <input type="radio" {...register('gender', { required: "Select a gender" })} value="Other" className="mx-2" />Other
+                <div className="form-group">
+                    <label>Gender:</label>
+                    <div>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" {...register('gender', { required: "Select a gender" })} value="Male" />
+                            <label className="form-check-label">Male</label>
                         </div>
-                        <p className="text-danger">{errors.gender?.message}</p>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" {...register('gender', { required: "Select a gender" })} value="Female" />
+                            <label className="form-check-label">Female</label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" {...register('gender', { required: "Select a gender" })} value="Other" />
+                            <label className="form-check-label">Other</label>
+                        </div>
                     </div>
+                    <small className="text-danger">{errors.gender?.message}</small>
+                </div>
 
-                    <div className="mb-3">
-                        <strong className="form-strong">Date of Birth:-</strong>
-                        <input type="date" {...register('date', { required: "Select a date" })} className="form-control" />
-                        <p className="text-danger">{errors.date?.message}</p>
-                    </div>
+                <div className="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="date" className="form-control" {...register('date', { required: "Select a date" })} />
+                    <small className="text-danger">{errors.date?.message}</small>
+                </div>
 
-                    <div className="text-center">
-                        <button className="btn btn-outline-danger w-100">Submit</button>
-                    </div>
-                </form>
-            </div>
+                <div>
+                    <button type="submit" className="btn btn-outline-success text-white my-2 ">Submit</button>
+                </div>
+            </form>
         </div>
     );
 };
